@@ -14,18 +14,34 @@
     "http://www.santander.cl/*",
     "https://www.santander.cl/*"
   ],
+  "web_accessible_resources": [
+    "src/inject/transa.js"
+  ],
   "content_scripts": [
     {
       "matches": [
-        "https://www.google.com/*"
+        "http://www.santander.cl/*"
       ],
-      "css": [
-        "src/inject/inject.css"
+      "js": [
+        "src/inject/ssl-fix.js"
       ]
     },
     {
       "matches": [
-        "https://www.google.com/*"
+        "https://www.santander.cl/",
+        "https://www.santander.cl/index.asp"
+      ],
+      "js": [
+        "src/inject/remember-me.js"
+      ]
+    },
+    {
+      "all_frames": true,
+      "matches": [
+        "https://www.santander.cl/transa/*"
+      ],
+      "css": [
+        "src/inject/inject.css"
       ],
       "js": [
         "src/inject/inject.js"

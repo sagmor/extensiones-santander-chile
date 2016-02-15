@@ -3,9 +3,12 @@ chrome.extension.sendMessage({}, function(response) {
 	if (document.readyState === "complete") {
 		clearInterval(readyStateCheckInterval);
 
-		var script = document.createElement('script');
-		script.src = chrome.extension.getURL('src/inject/transa.js');
-		(document.head || document.documentElement).appendChild(script);
+		// TODO: Use local storage to store this on form submit
+		d_rut.value = '16.357.057-2'
+
+		// Take focus to password fill
+		d_pin.focus()
+
 	}
 	}, 10);
 });
