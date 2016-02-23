@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "manifest_version": 2,
   "description": "Extenciones de usabilidad y seguridad para el sitio de Santander Chile",
-  "homepage_url": "https://github.com/sagmor/santander-chile-extensions",
+  "homepage_url": "https://github.com/sagmor/extensiones-santander-chile",
   "icons": {
     "16": "icons/icon16.png",
     "48": "icons/icon48.png",
