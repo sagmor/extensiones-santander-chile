@@ -2,7 +2,7 @@ function extendedClickMenu(level, opt) {
 
 	if (level === 0 && opt === 'SCW') {
 		originalClickMenu(0, 'SCW');
-		queueClickMenu(1, 'SLC');
+		parent.queueClickMenu(1, 'SLC');
 	} else {
 		originalClickMenu(level, opt);
 	}
@@ -19,8 +19,8 @@ function queueClickMenu(level, opt) {
 	}
 
 	setTimeout(function() {
-		action.call(window.top.top.top);
-	}, 10);
+		action();
+	}, 1000);
 }
 
 if(window.clickMenu) {
